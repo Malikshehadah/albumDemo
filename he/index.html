@@ -88,8 +88,9 @@
                 <h1 class="sitename">AlbumCraft</h1>
             </a>
 
-            <!-- Navigation Menu in the Center -->
-            <nav id="navmenu" class="navmenu">
+            <!-- Navigation Menu on the Right -->
+            <nav id="navmenu" class="navmenu ms-auto">
+                <!-- Added ms-auto to push it to the right -->
                 <ul>
                     <li><a href="#hero" class="active">בית</a></li>
                     <li><a href="#about">אודות</a></li>
@@ -101,13 +102,13 @@
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
-            <!-- Language Switcher on the Right -->
-            <div class="language-switcher ms-auto">
-                <!-- Added ms-auto to push it to the far right -->
+            <!-- Language Switcher on the Left After Menu Items -->
+            <div class="language-switcher ms-3">
+                <!-- Added ms-3 for spacing -->
                 <div class="dropdown">
                     <!-- Dropdown Toggle Button -->
                     <button class="btn btn-light dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Select language">
-                        <span class="fi fi-us me-2"></span> English
+                        <span class="fi fi-il me-2"></span> עברית <!-- Israel flag for Hebrew -->
                     </button>
 
                     <!-- Dropdown Menu with Language Options -->
@@ -145,7 +146,6 @@
 
         </div>
     </header>
-
     <main class="main">
 
         <!-- Hero Section -->
