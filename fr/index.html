@@ -77,9 +77,28 @@
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-            <!-- Language Switcher on the Left -->
-            <div class="language-switcher me-auto">
+            <!-- Logo on the Left -->
+            <a href="index.html" class="logo d-flex align-items-center me-auto">
                 <!-- Added me-auto to push it to the far left -->
+                <h1 class="sitename">AlbumCraft</h1>
+            </a>
+
+            <!-- Navigation Menu on the Left -->
+            <nav id="navmenu" class="navmenu me-3">
+                <!-- Added me-3 for spacing -->
+                <ul>
+                    <li><a href="#hero" class="active">Accueil</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Tarification</a></li>
+                    <li><a href="#services">Se connecter/S'inscrire</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <!-- Language Switcher on the Left -->
+            <div class="language-switcher">
                 <div class="dropdown">
                     <!-- Dropdown Toggle Button -->
                     <button class="btn btn-light dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Select language">
@@ -119,29 +138,8 @@
                 </div>
             </div>
 
-            <!-- Logo in the Center -->
-            <a href="index.html" class="logo d-flex align-items-center mx-auto">
-                <!-- Added mx-auto to center the logo -->
-                <h1 class="sitename">AlbumCraft</h1>
-            </a>
-
-            <!-- Navigation Menu on the Right -->
-            <nav id="navmenu" class="navmenu ms-auto">
-                <!-- Added ms-auto to push it to the far right -->
-                <ul>
-                    <li><a href="#hero" class="active">Accueil</a></li>
-                    <li><a href="#about">À propos</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#pricing">Tarification</a></li>
-                    <li><a href="#services">Se connecter/S'inscrire</a></li>
-                    <li><a href="#footer">Contact</a></li>
-                </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-            </nav>
-
         </div>
     </header>
-
     <main class="main">
 
         <!-- Hero Section -->
