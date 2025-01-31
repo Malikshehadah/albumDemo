@@ -24,7 +24,7 @@
     <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
     <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.1.0/css/flag-icons.min.css">
     <!-- Main CSS File -->
     <link href="../assets/css/main.css" rel="stylesheet">
 
@@ -77,11 +77,57 @@
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-            <a href="index.html" class="logo d-flex align-items-center">
+            <!-- Language Switcher on the Left -->
+            <div class="language-switcher me-auto">
+                <!-- Added me-auto to push it to the far left -->
+                <div class="dropdown">
+                    <!-- Dropdown Toggle Button -->
+                    <button class="btn btn-light dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Select language">
+                        <span class="fi fi-fr me-2"></span> Français <!-- French flag for French -->
+                    </button>
+
+                    <!-- Dropdown Menu with Language Options -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <!-- English Option -->
+                        <li>
+                            <a class="dropdown-item" href="../index.html">
+                                <span class="fi fi-us me-2"></span> English
+                            </a>
+                        </li>
+
+                        <!-- Arabic Option -->
+                        <li>
+                            <a class="dropdown-item" href="../ar/index.html">
+                                <span class="fi fi-sa me-2"></span> العربية <!-- Saudi Arabia flag for Arabic -->
+                            </a>
+                        </li>
+
+                        <!-- French Option -->
+                        <li>
+                            <a class="dropdown-item" href="../fr/index.html">
+                                <span class="fi fi-fr me-2"></span> Français <!-- France flag for French -->
+                            </a>
+                        </li>
+
+                        <!-- Hebrew Option -->
+                        <li>
+                            <a class="dropdown-item" href="../he/index.html">
+                                <span class="fi fi-il me-2"></span> עברית <!-- Israel flag for Hebrew -->
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Logo in the Center -->
+            <a href="index.html" class="logo d-flex align-items-center mx-auto">
+                <!-- Added mx-auto to center the logo -->
                 <h1 class="sitename">AlbumCraft</h1>
             </a>
 
-            <nav id="navmenu" class="navmenu">
+            <!-- Navigation Menu on the Right -->
+            <nav id="navmenu" class="navmenu ms-auto">
+                <!-- Added ms-auto to push it to the far right -->
                 <ul>
                     <li><a href="#hero" class="active">Accueil</a></li>
                     <li><a href="#about">À propos</a></li>
