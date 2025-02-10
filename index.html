@@ -96,30 +96,30 @@
         }
     </style>
     <script>
-        // Function to get the user's preferred language
+       
         function getPreferredLanguage() {
             const supportedLanguages = ['en', 'fr', 'he', 'ar'];
             const browserLanguage = navigator.language || navigator.userLanguage;
 
-            // Extract the primary language code (e.g., 'en' from 'en-US')
+            
             const primaryLanguage = browserLanguage.split('-')[0];
 
-            // Check if the primary language is supported
+            
             if (supportedLanguages.includes(primaryLanguage)) {
                 return primaryLanguage;
             } else {
-                return 'en'; // Default to English if the language is not supported
+                return 'en'; // Default  language 
             }
         }
 
-        // Function to redirect based on language
+       
         function redirectBasedOnLanguage() {
             const language = getPreferredLanguage();
             const languageMap = {
-                'en': '/albumDemo/index.html',
-                'fr': '/albumDemo/fr/index.html',
-                'he': '/albumDemo/he/index.html',
-                'ar': '/albumDemo/ar/index.html'
+                'en': '/albumDemo/index.html', // English
+                'fr': '/albumDemo/fr/index.html', // French
+                'he': '/albumDemo/he/index.html', // Hebrew
+                'ar': '/albumDemo/ar/index.html' // Arabic
             };
 
             const redirectUrl = languageMap[language] || '/albumDemo/index.html';
