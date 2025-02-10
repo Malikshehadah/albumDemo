@@ -8,16 +8,16 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
-    
+
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-     
+
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-   
+
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -25,39 +25,39 @@
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    
+
     <link href="assets/css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.1.0/css/flag-icons.min.css">
-   
+
     <style>
 
         .icons-bg1 {
             color: #ef6603;
         }
 
-         .hero {
+        .hero {
             width: 100%;
-            height: 100vh;  
+            height: 100vh;
             overflow: hidden;
             position: relative;
         }
 
-        
+
         #hero-carousel {
             width: 100%;
             height: 100%;
         }
 
-         
+
         .carousel-item {
             width: 100%;
             height: 100%;
-            background-size: cover;  
-            background-position: center;  
-            background-repeat: no-repeat;  
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
-          .carousel-container {
+        .carousel-container {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -73,28 +73,63 @@
             padding: 20px;
         }
 
-        
+
         .header .container-fluid {
             display: flex;
             align-items: center;
-            justify-content: flex-start;  
+            justify-content: flex-start;
         }
 
- 
+
         .logo {
-            margin-right: 1rem;  
+            margin-right: 1rem;
         }
 
- 
+
         .navmenu {
-            margin-right: 1rem;  
+            margin-right: 1rem;
         }
 
-  
+
         .language-switcher {
-            margin-left: auto;  
+            margin-left: auto;
         }
     </style>
+    <script>
+        // Function to get the user's preferred language
+        function getPreferredLanguage() {
+            const supportedLanguages = ['en', 'fr', 'he', 'ar'];
+            const browserLanguage = navigator.language || navigator.userLanguage;
+
+            // Extract the primary language code (e.g., 'en' from 'en-US')
+            const primaryLanguage = browserLanguage.split('-')[0];
+
+            // Check if the primary language is supported
+            if (supportedLanguages.includes(primaryLanguage)) {
+                return primaryLanguage;
+            } else {
+                return 'en'; // Default to English if the language is not supported
+            }
+        }
+
+        // Function to redirect based on language
+        function redirectBasedOnLanguage() {
+            const language = getPreferredLanguage();
+            const languageMap = {
+                'en': '/albumDemo/index.html',
+                'fr': '/albumDemo/fr/index.html',
+                'he': '/albumDemo/he/index.html',
+                'ar': '/albumDemo/ar/index.html'
+            };
+
+            const redirectUrl = languageMap[language] || '/albumDemo/index.html';
+            window.location.href = redirectUrl;
+        }
+
+        // Redirect on page load
+        redirectBasedOnLanguage();
+    </script>
+
 </head>
 
 <body class="index-page">
