@@ -96,24 +96,29 @@
         }
     </style>
     <script>
-       
+        
         function getPreferredLanguage() {
             const supportedLanguages = ['en', 'fr', 'he', 'ar'];
             const browserLanguage = navigator.language || navigator.userLanguage;
 
-            
+          
             const primaryLanguage = browserLanguage.split('-')[0];
 
-            
+           
             if (supportedLanguages.includes(primaryLanguage)) {
                 return primaryLanguage;
             } else {
-                return 'en'; // Default  language 
+                return 'en'; // Default to English  language 
             }
         }
 
        
         function redirectBasedOnLanguage() {
+          
+            if (sessionStorage.getItem('languageRedirected')) {
+                return; // Exit if already redirected
+            }
+
             const language = getPreferredLanguage();
             const languageMap = {
                 'en': '/albumDemo/index.html', // English
@@ -122,14 +127,21 @@
                 'ar': '/albumDemo/ar/index.html' // Arabic
             };
 
+            const currentPath = window.location.pathname;
             const redirectUrl = languageMap[language] || '/albumDemo/index.html';
-            window.location.href = redirectUrl;
+
+            // Only redirect if the user is on the root page or English page
+            if (currentPath === '/' || currentPath === '/albumDemo/index.html') {
+                sessionStorage.setItem('languageRedirected', 'true'); 
+                setTimeout(() => {
+                    window.location.href = redirectUrl;
+                }, 100); 
+            }
         }
 
-        // Redirect on page load
-        redirectBasedOnLanguage();
+        // Run the redirection logic after the page loads
+        window.addEventListener('load', redirectBasedOnLanguage);
     </script>
-
 </head>
 
 <body class="index-page">
